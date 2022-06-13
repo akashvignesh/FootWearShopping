@@ -1,0 +1,17 @@
+package project
+import java.sql.*;
+public class connectionProvider{
+    public static connection getCon() 
+    {
+        try {
+            Class.forName("com.mysql,cj.jdbc.Driver");
+            Connection con=Drivermanger.getConnection("jdbc:mysql://localhost:3306/tablename**","root","root");
+            return con;
+        }
+    catch(Exception e)
+    {
+        System.out.print(e);
+      return null;
+    
+      }  }
+} 
